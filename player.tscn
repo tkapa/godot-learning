@@ -1,19 +1,19 @@
 [gd_scene load_steps=8 format=3 uid="uid://b1tgrggun6p01"]
 
-[ext_resource type="Texture2D" uid="uid://bir011aa227q5" path="res://art/playerGrey_up1.png" id="1_sur4y"]
-[ext_resource type="Script" path="res://player.gd" id="1_xxn74"]
-[ext_resource type="Texture2D" uid="uid://btr7l7737y6d3" path="res://art/playerGrey_up2.png" id="2_ycwhp"]
-[ext_resource type="Texture2D" uid="uid://cc2ksguk4kche" path="res://art/playerGrey_walk1.png" id="3_xkjee"]
-[ext_resource type="Texture2D" uid="uid://ccms7bgudnkgq" path="res://art/playerGrey_walk2.png" id="4_bld51"]
+[ext_resource type="Script" path="res://Player.gd" id="1_7l0xg"]
+[ext_resource type="Texture2D" uid="uid://bir011aa227q5" path="res://art/playerGrey_up1.png" id="2_6rw34"]
+[ext_resource type="Texture2D" uid="uid://btr7l7737y6d3" path="res://art/playerGrey_up2.png" id="3_6r3hv"]
+[ext_resource type="Texture2D" uid="uid://cc2ksguk4kche" path="res://art/playerGrey_walk1.png" id="4_08m2r"]
+[ext_resource type="Texture2D" uid="uid://ccms7bgudnkgq" path="res://art/playerGrey_walk2.png" id="5_g2p3f"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rp85a"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_sur4y")
+"texture": ExtResource("2_6rw34")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_ycwhp")
+"texture": ExtResource("3_6r3hv")
 }],
 "loop": true,
 "name": &"up",
@@ -21,10 +21,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_xkjee")
+"texture": ExtResource("4_08m2r")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_bld51")
+"texture": ExtResource("5_g2p3f")
 }],
 "loop": true,
 "name": &"walk",
@@ -32,15 +32,15 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d3b68"]
-radius = 56.0
-height = 136.0
+radius = 27.0
+height = 68.0
 
 [node name="Player" type="Area2D"]
-scale = Vector2(0.5, 0.5)
-script = ExtResource("1_xxn74")
+script = ExtResource("1_7l0xg")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_rp85a")
 animation = &"up"
 
